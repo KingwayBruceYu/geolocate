@@ -45,6 +45,10 @@
 
       const navigation = new mapPlus.NavigationControl()
       mapapi.addControl( navigation , 'bottom-right' )
+
+      mapapi.on( 'style.load' , () => {
+        mapapi.offLayer( 'base3d' )
+      })
     </script>
 
   </body>
